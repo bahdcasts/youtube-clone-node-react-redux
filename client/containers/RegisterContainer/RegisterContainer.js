@@ -1,7 +1,7 @@
 import React from 'react'
 
 // components
-import Register from '../../components/Register'
+import Register from '@/components/Register'
 
 class RegisterContainer extends React.Component {
   render() {

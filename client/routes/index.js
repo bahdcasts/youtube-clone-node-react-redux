@@ -2,10 +2,10 @@ import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 // components
-import Navbar from '../components/Navbar'
+import Navbar from '@/components/Navbar'
 
 // containers
-import RegisterContainer from '../containers/RegisterContainer'
+import RegisterContainer from '@/containers/RegisterContainer'
 
 const Router = () => (
   <BrowserRouter>
