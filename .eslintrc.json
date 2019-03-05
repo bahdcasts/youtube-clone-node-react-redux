@@ -1,0 +1,15 @@
+{
+    "extends": [
+      "standard",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "globals": {
+      "use": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    }
+}
