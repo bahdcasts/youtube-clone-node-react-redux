@@ -1,26 +1,17 @@
 import React from 'react'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
+
+// components
+import Navbar from '../components/Navbar'
+
+// containers
+import RegisterContainer from '../containers/RegisterContainer'
 
 const Router = () => (
   <BrowserRouter>
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
-      <Route
-        path={'/home'}
-        component={() => <h1>THIS IS THE HOME COMPONENT</h1>}
-      />
+      <Navbar />
+      <Route path={'/auth/register'} component={RegisterContainer} />
       <Route
         path={'/about'}
         component={() => <h1>THIS IS THE ABOUT COMPONENT</h1>}

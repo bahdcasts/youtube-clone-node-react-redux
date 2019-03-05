@@ -117,6 +117,90 @@
 })(
   /************************************************************************/
   /******/ {
+    /***/ './client/components/Navbar/Navbar.js':
+      /*!********************************************!*\
+  !*** ./client/components/Navbar/Navbar.js ***!
+  \********************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");\n\n\n\nvar Navbar = function Navbar() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {\n    className: "navbar navbar-expand-lg bg-white"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n    className: "container"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n    className: "navbar-translate"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {\n    className: "navbar-brand",\n    href: "/"\n  }, "YTube"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {\n    className: "navbar-toggler",\n    type: "button",\n    "data-toggle": "collapse",\n    "aria-expanded": "false",\n    "aria-label": "Toggle navigation"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {\n    className: "navbar-toggler-icon"\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {\n    className: "navbar-toggler-icon"\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {\n    className: "navbar-toggler-icon"\n  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n    className: "collapse navbar-collapse"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {\n    className: "navbar-nav"\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {\n    className: "form-inline ml-auto"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n    className: "form-group no-border"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {\n    type: "text",\n    className: "form-control",\n    placeholder: "Search"\n  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {\n    className: "navbar-nav navbar-right"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {\n    className: "nav-item"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {\n    to: \'/auth/register\',\n    className: "nav-link"\n  }, "Register"))))));\n};\n\n/* harmony default export */ __webpack_exports__["default"] = (Navbar);\n\n//# sourceURL=webpack:///./client/components/Navbar/Navbar.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './client/components/Navbar/index.js':
+      /*!*******************************************!*\
+  !*** ./client/components/Navbar/index.js ***!
+  \*******************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbar */ "./client/components/Navbar/Navbar.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Navbar__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n\n\n//# sourceURL=webpack:///./client/components/Navbar/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './client/components/Register/Register.js':
+      /*!************************************************!*\
+  !*** ./client/components/Register/Register.js ***!
+  \************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar Register = function Register() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {\n    type: "text",\n    name: "name",\n    placeholder: "Your name",\n    className: "form-control"\n  })));\n};\n\n/* harmony default export */ __webpack_exports__["default"] = (Register);\n\n//# sourceURL=webpack:///./client/components/Register/Register.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './client/components/Register/index.js':
+      /*!*********************************************!*\
+  !*** ./client/components/Register/index.js ***!
+  \*********************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Register__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Register */ "./client/components/Register/Register.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Register__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n\n\n//# sourceURL=webpack:///./client/components/Register/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './client/containers/RegisterContainer/RegisterContainer.js':
+      /*!******************************************************************!*\
+  !*** ./client/containers/RegisterContainer/RegisterContainer.js ***!
+  \******************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Register__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Register */ "./client/components/Register/index.js");\nfunction _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn\'t been initialised - super() hasn\'t been called"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n // components\n\n\n\nvar RegisterContainer =\n/*#__PURE__*/\nfunction (_React$Component) {\n  _inherits(RegisterContainer, _React$Component);\n\n  function RegisterContainer() {\n    _classCallCheck(this, RegisterContainer);\n\n    return _possibleConstructorReturn(this, _getPrototypeOf(RegisterContainer).apply(this, arguments));\n  }\n\n  _createClass(RegisterContainer, [{\n    key: "render",\n    value: function render() {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Register__WEBPACK_IMPORTED_MODULE_1__["default"], null);\n    }\n  }]);\n\n  return RegisterContainer;\n}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);\n\n/* harmony default export */ __webpack_exports__["default"] = (RegisterContainer);\n\n//# sourceURL=webpack:///./client/containers/RegisterContainer/RegisterContainer.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './client/containers/RegisterContainer/index.js':
+      /*!******************************************************!*\
+  !*** ./client/containers/RegisterContainer/index.js ***!
+  \******************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _RegisterContainer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RegisterContainer */ "./client/containers/RegisterContainer/RegisterContainer.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _RegisterContainer__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n\n\n//# sourceURL=webpack:///./client/containers/RegisterContainer/index.js?'
+        )
+
+        /***/
+      },
+
     /***/ './client/index.js':
       /*!*************************!*\
   !*** ./client/index.js ***!
@@ -139,7 +223,7 @@
       /***/ function(module, __webpack_exports__, __webpack_require__) {
         'use strict'
         eval(
-          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");\n\n\n\nvar Router = function Router() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {\n    to: "/home"\n  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {\n    to: "/contact"\n  }, "Contact")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {\n    to: "/about"\n  }, "About")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {\n    path: \'/home\',\n    component: function component() {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "THIS IS THE HOME COMPONENT");\n    }\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {\n    path: \'/about\',\n    component: function component() {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "THIS IS THE ABOUT COMPONENT");\n    }\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {\n    path: \'/contact\',\n    component: function component() {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "THIS IS THE CONTACT COMPONENT");\n    }\n  })));\n};\n\n/* harmony default export */ __webpack_exports__["default"] = (Router);\n\n//# sourceURL=webpack:///./client/routes/index.js?'
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");\n/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Navbar */ "./client/components/Navbar/index.js");\n/* harmony import */ var _containers_RegisterContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../containers/RegisterContainer */ "./client/containers/RegisterContainer/index.js");\n\n // components\n\n // containers\n\n\n\nvar Router = function Router() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {\n    path: \'/auth/register\',\n    component: _containers_RegisterContainer__WEBPACK_IMPORTED_MODULE_3__["default"]\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {\n    path: \'/about\',\n    component: function component() {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "THIS IS THE ABOUT COMPONENT");\n    }\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {\n    path: \'/contact\',\n    component: function component() {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "THIS IS THE CONTACT COMPONENT");\n    }\n  })));\n};\n\n/* harmony default export */ __webpack_exports__["default"] = (Router);\n\n//# sourceURL=webpack:///./client/routes/index.js?'
         )
 
         /***/
