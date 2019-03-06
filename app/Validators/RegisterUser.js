@@ -11,7 +11,8 @@ class RegisterUser {
 
   get messages() {
     return {
-      required: 'The {{ field }} is required.'
+      required: 'The {{ field }} is required.',
+      unique: 'The {{ field }} has already been taken.'
     }
   }
 

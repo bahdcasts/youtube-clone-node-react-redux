@@ -11,5 +11,11 @@ const instance = Axios.create({
 
 export default createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(axiosMiddleware(instance)))
+  composeWithDevTools(
+    applyMiddleware(
+      axiosMiddleware(instance, {
+        returnRejectedPromiseOnError: true
+      })
+    )
+  )
 )

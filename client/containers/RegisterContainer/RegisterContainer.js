@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import Register from '@/components/Register'
 
 // actions
-import { postRegister } from '@/store/actions'
+import { postRegister, setAuth } from '@/store/actions'
 
 class RegisterContainer extends React.Component {
   /**
@@ -45,7 +45,18 @@ class RegisterContainer extends React.Component {
    * @param {Object} methods Methods from formik to manage form
    * @return null
    */
-  onSubmit = (values, methods) => this.props.dispatch(postRegister(values))
+  onSubmit = (values, { setErrors }) => {
+    const { dispatch } = this.props
+    dispatch(postRegister(values))
+      .then(response => {
+        localStorage.setItem('auth', JSON.stringify(response.payload.data))
+
+        dispatch(setAuth(response.payload.data))
+      })
+      .catch(error => {
+        setErrors(error.error.response.data)
+      })
+  }
 
   /**
    * Render the template for this component
