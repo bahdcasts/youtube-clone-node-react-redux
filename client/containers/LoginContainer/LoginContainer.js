@@ -1,9 +1,13 @@
 import React from 'react'
 import * as Yup from 'yup'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 // components
 import Login from '@/components/Login'
+
+// actions
+import { setAuth, postLogin } from '@/store/actions'
 
 class LoginContainer extends React.Component {
   /**
@@ -16,6 +20,15 @@ class LoginContainer extends React.Component {
       email: '',
       password: ''
     }
+  }
+
+  /**
+   * Proptypes for component
+   *
+   * @var {Object}
+   */
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired
   }
 
   /**
@@ -35,7 +48,19 @@ class LoginContainer extends React.Component {
    *
    * @return {null}
    */
-  onSubmit = console.log
+  onSubmit = (values, { setErrors }) => {
+    const { dispatch } = this.props
+
+    dispatch(postLogin(values))
+      .then(response => {
+        localStorage.setItem('auth', JSON.stringify(response.payload.data))
+
+        dispatch(setAuth(response.payload.data))
+      })
+      .catch(errors => {
+        setErrors(errors.error.response.data)
+      })
+  }
 
   /**
    * Return the component jsx

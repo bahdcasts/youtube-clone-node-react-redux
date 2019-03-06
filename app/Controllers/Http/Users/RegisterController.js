@@ -3,12 +3,18 @@
 const User = use('App/Models/User')
 
 class RegisterController {
+  /**
+   * Handle user registration
+   *
+   * @param {Object} context.auth
+   * @param {Object} context.request
+   * @param {Object} context.response
+   */
   async register({ auth, request, response }) {
-    // register user
     const user = await User.create(request.only(['name', 'email', 'password']))
-    // generate jwt
+
     const token = await auth.generate(user)
-    // return response
+
     return response.created({ user, token })
   }
 }

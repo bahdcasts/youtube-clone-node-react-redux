@@ -16,6 +16,23 @@ export const postRegister = data => ({
 })
 
 /**
+ * Create action to login a user
+ *
+ * @param {Object} data login credentials
+ * @return {Object} Redux action
+ */
+export const postLogin = data => ({
+  type: 'POST_LOGIN',
+  payload: {
+    request: {
+      method: 'POST',
+      url: 'login',
+      data
+    }
+  }
+})
+
+/**
  * Set the auth data for a user
  *
  * @param {Object} data the user data from server

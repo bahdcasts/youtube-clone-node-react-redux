@@ -3,6 +3,15 @@
 const User = use('App/Models/User')
 
 class LoginController {
+  /**
+   * Handle login request for a user
+   *
+   * @param {Object} auth
+   * @param {Object} request
+   * @param {Object} response
+   *
+   * @return {Response}
+   */
   async login({ auth, request, response }) {
     try {
       const token = await auth.attempt(
