@@ -20,4 +20,6 @@ Route.post('api/register', 'Users/RegisterController.register').validator(
   'RegisterUser'
 )
 
+Route.post('api/login', 'Users/LoginController.login')
+
 Route.on('*').render('app')
