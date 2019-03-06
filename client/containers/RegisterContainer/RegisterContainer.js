@@ -1,8 +1,12 @@
 import React from 'react'
 import * as Yup from 'yup'
+import { connect } from 'react-redux'
 
 // components
 import Register from '@/components/Register'
+
+// actions
+import { postRegister } from '@/store/actions'
 
 class RegisterContainer extends React.Component {
   /**
@@ -41,9 +45,7 @@ class RegisterContainer extends React.Component {
    * @param {Object} methods Methods from formik to manage form
    * @return null
    */
-  onSubmit = (values, methods) => {
-    console.log(values, methods)
-  }
+  onSubmit = (values, methods) => this.props.dispatch(postRegister(values))
 
   /**
    * Render the template for this component
@@ -61,4 +63,4 @@ class RegisterContainer extends React.Component {
   }
 }
 
-export default RegisterContainer
+export default connect()(RegisterContainer)
