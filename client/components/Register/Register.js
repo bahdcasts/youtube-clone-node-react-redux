@@ -1,5 +1,6 @@
 import React from 'react'
 import { Formik } from 'formik'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 const Register = ({ onSubmit, initialValues, RegisterSchema }) => (
@@ -112,5 +113,15 @@ const Register = ({ onSubmit, initialValues, RegisterSchema }) => (
     </div>
   </div>
 )
+
+Register.propTypes = {
+  initialValues: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
+    password: PropTypes.string
+  }).isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  RegisterSchema: PropTypes.object.isRequired
+}
 
 export default Register

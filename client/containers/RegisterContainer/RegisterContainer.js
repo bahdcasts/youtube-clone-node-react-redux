@@ -1,5 +1,6 @@
 import React from 'react'
 import * as Yup from 'yup'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 // components
@@ -20,6 +21,15 @@ class RegisterContainer extends React.Component {
       email: '',
       password: ''
     }
+  }
+
+  /**
+   * The proptypes for this component
+   *
+   * @var {Object}
+   */
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired
   }
 
   /**

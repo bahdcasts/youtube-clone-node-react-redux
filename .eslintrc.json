@@ -9,7 +9,8 @@
     ],
     "parser": "babel-eslint",
     "globals": {
-      "use": true
+      "use": true,
+      "localStorage": true
     },
     "rules": {
       "prettier/prettier": "error"
