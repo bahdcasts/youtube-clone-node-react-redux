@@ -239,6 +239,18 @@
     "@babel/traverse" "^7.1.0"
     "@babel/types" "^7.0.0"
 
+"@babel/helper-create-class-features-plugin@^7.3.4":
+  version "7.3.4"
+  resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.3.4.tgz#092711a7a3ad8ea34de3e541644c2ce6af1f6f0c"
+  integrity sha512-uFpzw6L2omjibjxa8VGZsJUPL5wJH0zzGKpoz0ccBkzIa6C8kWNUbiBmQ0rgOKWlHJ6qzmfa6lTiGchiV8SC+g==
+  dependencies:
+    "@babel/helper-function-name" "^7.1.0"
+    "@babel/helper-member-expression-to-functions" "^7.0.0"
+    "@babel/helper-optimise-call-expression" "^7.0.0"
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/helper-replace-supers" "^7.3.4"
+    "@babel/helper-split-export-declaration" "^7.0.0"
+
 "@babel/helper-define-map@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-define-map/-/helper-define-map-7.1.0.tgz#3b74caec329b3c80c116290887c0dd9ae468c20c"
@@ -388,7 +400,7 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.2.2", "@babel/parser@^7.3.4":
+"@babel/parser@^7.0.0", "@babel/parser@^7.2.2", "@babel/parser@^7.3.4":
   version "7.3.4"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.3.4.tgz#a43357e4bbf4b92a437fb9e465c192848287f27c"
   integrity sha512-tXZCqWtlOOP4wgCp6RjRvLmfuhnqTLy9VHwRochJBCP2nDm27JnnuFEnXFASVyQNHk36jD1tAammsCEEqgscIQ==
@@ -401,6 +413,14 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/helper-remap-async-to-generator" "^7.1.0"
     "@babel/plugin-syntax-async-generators" "^7.2.0"
+
+"@babel/plugin-proposal-class-properties@^7.3.4":
+  version "7.3.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.3.4.tgz#410f5173b3dc45939f9ab30ca26684d72901405e"
+  integrity sha512-lUf8D3HLs4yYlAo8zjuneLvfxN7qfKv1Yzbj5vjqaqMJxgJA3Ipwp4VUJ+OrOdz53Wbww6ahwB8UhB2HQyLotA==
+  dependencies:
+    "@babel/helper-create-class-features-plugin" "^7.3.4"
+    "@babel/helper-plugin-utils" "^7.0.0"
 
 "@babel/plugin-proposal-json-strings@^7.2.0":
   version "7.2.0"
@@ -800,7 +820,7 @@
     "@babel/parser" "^7.2.2"
     "@babel/types" "^7.2.2"
 
-"@babel/traverse@^7.1.0", "@babel/traverse@^7.1.5", "@babel/traverse@^7.3.4":
+"@babel/traverse@^7.0.0", "@babel/traverse@^7.1.0", "@babel/traverse@^7.1.5", "@babel/traverse@^7.3.4":
   version "7.3.4"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.3.4.tgz#1330aab72234f8dea091b08c4f8b9d05c7119e06"
   integrity sha512-TvTHKp6471OYEcE/91uWmhR6PrrYywQntCHSaZ8CM8Vmp+pjAusal4nGB2WCCQd0rvI7nOMKn9GnbcvTUz3/ZQ==
@@ -1456,6 +1476,18 @@ atob@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+
+babel-eslint@^10.0.1:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.0.1.tgz#919681dc099614cd7d31d45c8908695092a1faed"
+  integrity sha512-z7OT1iNV+TjOwHNLLyJk+HN+YVWX+CLE6fPD2SymJZOZQBs+QIexFjhm4keGTm8MW9xr4EC9Q0PbaLB24V5GoQ==
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@babel/parser" "^7.0.0"
+    "@babel/traverse" "^7.0.0"
+    "@babel/types" "^7.0.0"
+    eslint-scope "3.7.1"
+    eslint-visitor-keys "^1.0.0"
 
 babel-loader@^8.0.5:
   version "8.0.5"
@@ -2707,6 +2739,14 @@ eslint-plugin-standard@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-4.0.0.tgz#f845b45109c99cd90e77796940a344546c8f6b5c"
   integrity sha512-OwxJkR6TQiYMmt1EsNRMe5qG3GsbjlcOhbGUBY4LtavF9DsLaTcoR+j2Tdjqi23oUwKNUqX7qcn5fPStafMdlA==
+
+eslint-scope@3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
+  integrity sha1-PWPD7f2gLgbgGkUq2IyqzHzctug=
+  dependencies:
+    esrecurse "^4.1.0"
+    estraverse "^4.1.1"
 
 eslint-scope@^4.0.0, eslint-scope@^4.0.2:
   version "4.0.2"

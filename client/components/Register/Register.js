@@ -1,20 +1,8 @@
 import React from 'react'
-import * as Yup from 'yup'
 import { Formik } from 'formik'
 import classnames from 'classnames'
 
-const RegisterSchema = Yup.object().shape({
-  name: Yup.string().required(),
-  email: Yup.string()
-    .email()
-    .required(),
-  password: Yup.string()
-    .required()
-    .min(6)
-    .max(6)
-})
-
-const Register = () => (
+const Register = ({ onSubmit, initialValues, RegisterSchema }) => (
   <div className="container my-5">
     <div className="row justify-content-center">
       <div className="col-md-6">
@@ -25,11 +13,19 @@ const Register = () => (
 
           <div className="card-body">
             <Formik
-              initialValues={{ name: '', email: '', password: '' }}
+              onSubmit={onSubmit}
+              initialValues={initialValues}
               validationSchema={RegisterSchema}
             >
-              {({ values, errors, touched, handleChange, handleBlur }) => (
-                <form>
+              {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit
+              }) => (
+                <form onSubmit={handleSubmit}>
                   <div
                     className={classnames('form-group', {
                       'has-danger': errors.name && touched.name,
