@@ -26,3 +26,19 @@ test('should register a new user and return token', async ({
     token: {}
   })
 })
+
+test('should validate registration data before registering a user', async ({
+  client
+}) => {
+  const response = await client
+    .post('api/register')
+    .send({
+      name: 'bahdcoder',
+      password: 'password'
+    })
+    .end()
+
+  response.assertStatus(422).assertJSONSubset({
+    email: 'The email is required.'
+  })
+})
