@@ -5,21 +5,15 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Navbar from '@/components/Navbar'
 
 // containers
+import LoginContainer from '@/containers/LoginContainer'
 import RegisterContainer from '@/containers/RegisterContainer'
 
 const Router = () => (
   <BrowserRouter>
     <>
       <Navbar />
+      <Route path={'/auth/login'} component={LoginContainer} />
       <Route path={'/auth/register'} component={RegisterContainer} />
-      <Route
-        path={'/about'}
-        component={() => <h1>THIS IS THE ABOUT COMPONENT</h1>}
-      />
-      <Route
-        path={'/contact'}
-        component={() => <h1>THIS IS THE CONTACT COMPONENT</h1>}
-      />
     </>
   </BrowserRouter>
 )

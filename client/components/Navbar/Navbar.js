@@ -29,6 +29,9 @@ const Navbar = () => (
         </form>
         <ul className="navbar-nav navbar-right">
           <li className="nav-item">
+            <Link to={'/auth/login'} className="nav-link">
+              Login
+            </Link>
             <Link to={'/auth/register'} className="nav-link">
               Register
             </Link>
