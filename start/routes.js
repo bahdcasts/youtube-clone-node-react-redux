@@ -16,4 +16,6 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
+Route.post('api/register', 'Users/RegisterController.register')
+
 Route.on('*').render('app')
