@@ -1,5 +1,18 @@
 import React from 'react'
+import * as Yup from 'yup'
 import { Formik } from 'formik'
+import classnames from 'classnames'
+
+const RegisterSchema = Yup.object().shape({
+  name: Yup.string().required(),
+  email: Yup.string()
+    .email()
+    .required(),
+  password: Yup.string()
+    .required()
+    .min(6)
+    .max(6)
+})
 
 const Register = () => (
   <div className="container my-5">
@@ -11,38 +24,85 @@ const Register = () => (
           </div>
 
           <div className="card-body">
-            <Formik initialValues={{ name: '', email: '', password: '' }}>
-              {({ values, handleChange }) => (
+            <Formik
+              initialValues={{ name: '', email: '', password: '' }}
+              validationSchema={RegisterSchema}
+            >
+              {({ values, errors, touched, handleChange, handleBlur }) => (
                 <form>
-                  <div className="form-group">
+                  <div
+                    className={classnames('form-group', {
+                      'has-danger': errors.name && touched.name,
+                      'has-success': !errors.name && touched.name
+                    })}
+                  >
                     <input
                       type="text"
                       name="name"
                       value={values.name}
+                      onBlur={handleBlur}
                       onChange={handleChange}
                       placeholder="Your name"
-                      className="form-control"
+                      className={classnames('form-control', {
+                        'form-control-danger': errors.name && touched.name,
+                        'form-control-success': !errors.name && touched.name
+                      })}
                     />
+                    {errors.name && touched.name && (
+                      <div className="invalid-feedback d-block">
+                        {errors.name}
+                      </div>
+                    )}
                   </div>
-                  <div className="form-group">
+                  <div
+                    className={classnames('form-group', {
+                      'has-danger': errors.email && touched.email,
+                      'has-success': !errors.email && touched.email
+                    })}
+                  >
                     <input
                       type="email"
                       name="email"
+                      onBlur={handleBlur}
                       value={values.email}
                       onChange={handleChange}
                       placeholder="Your email"
-                      className="form-control"
+                      className={classnames('form-control', {
+                        'form-control-danger': errors.email && touched.email,
+                        'form-control-success': !errors.email && touched.email
+                      })}
                     />
+                    {errors.email && touched.email && (
+                      <div className="invalid-feedback d-block">
+                        {errors.email}
+                      </div>
+                    )}
                   </div>
-                  <div className="form-group">
+                  <div
+                    className={classnames('form-group', {
+                      'has-danger': errors.password && touched.password,
+                      'has-success': !errors.password && touched.password
+                    })}
+                  >
                     <input
                       type="password"
                       name="password"
-                      value={values.email}
+                      onBlur={handleBlur}
+                      value={values.password}
                       onChange={handleChange}
                       placeholder="Your password"
-                      className="form-control"
+                      className={classnames('form-control', {
+                        'form-control-danger':
+                          errors.password && touched.password,
+                        'form-control-success':
+                          !errors.password && touched.password
+                      })}
                     />
+                    {errors.password && touched.password && (
+                      <div className="invalid-feedback d-block">
+                        {errors.password}
+                      </div>
+                    )}
                   </div>
                   <div className="text-center">
                     <button className="btn btn-info">Submit</button>
