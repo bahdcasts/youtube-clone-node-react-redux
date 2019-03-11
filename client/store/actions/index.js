@@ -42,3 +42,13 @@ export const setAuth = data => ({
   type: 'SET_AUTH',
   payload: data
 })
+
+export const getChannel = () => ({
+  type: 'GET_CHANNEL',
+  payload: {
+    request: {
+      method: 'GET',
+      url: 'channel'
+    }
+  }
+})

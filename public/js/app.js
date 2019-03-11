@@ -117,6 +117,34 @@
 })(
   /************************************************************************/
   /******/ {
+    /***/ './client/components/Channel/Channel.js':
+      /*!**********************************************!*\
+  !*** ./client/components/Channel/Channel.js ***!
+  \**********************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar Channel = function Channel() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n    className: "card card-default"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n    className: "card-header"\n  }, "My Channel"));\n};\n\n/* harmony default export */ __webpack_exports__["default"] = (Channel);\n\n//# sourceURL=webpack:///./client/components/Channel/Channel.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './client/components/Channel/index.js':
+      /*!********************************************!*\
+  !*** ./client/components/Channel/index.js ***!
+  \********************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Channel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Channel */ "./client/components/Channel/Channel.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Channel__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n\n\n//# sourceURL=webpack:///./client/components/Channel/index.js?'
+        )
+
+        /***/
+      },
+
     /***/ './client/components/Login/Login.js':
       /*!******************************************!*\
   !*** ./client/components/Login/Login.js ***!
@@ -196,6 +224,34 @@
         'use strict'
         eval(
           '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Register__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Register */ "./client/components/Register/Register.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Register__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n\n\n//# sourceURL=webpack:///./client/components/Register/index.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './client/containers/ChannelContainer/ChannelContainer.js':
+      /*!****************************************************************!*\
+  !*** ./client/containers/ChannelContainer/ChannelContainer.js ***!
+  \****************************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");\n/* harmony import */ var _components_Channel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/Channel */ "./client/components/Channel/index.js");\n/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/store/actions */ "./client/store/actions/index.js");\nfunction _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn\'t been initialised - super() hasn\'t been called"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n // components\n\n // actions\n\n\n\nvar ChannelContainer =\n/*#__PURE__*/\nfunction (_React$Component) {\n  _inherits(ChannelContainer, _React$Component);\n\n  function ChannelContainer() {\n    _classCallCheck(this, ChannelContainer);\n\n    return _possibleConstructorReturn(this, _getPrototypeOf(ChannelContainer).apply(this, arguments));\n  }\n\n  _createClass(ChannelContainer, [{\n    key: "componentDidMount",\n    value: function componentDidMount() {\n      var dispatch = this.props.dispatch;\n      dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_3__["getChannel"])());\n    }\n  }, {\n    key: "render",\n    value: function render() {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Channel__WEBPACK_IMPORTED_MODULE_2__["default"], null);\n    }\n  }]);\n\n  return ChannelContainer;\n}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);\n\n/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])()(ChannelContainer));\n\n//# sourceURL=webpack:///./client/containers/ChannelContainer/ChannelContainer.js?'
+        )
+
+        /***/
+      },
+
+    /***/ './client/containers/ChannelContainer/index.js':
+      /*!*****************************************************!*\
+  !*** ./client/containers/ChannelContainer/index.js ***!
+  \*****************************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ChannelContainer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChannelContainer */ "./client/containers/ChannelContainer/ChannelContainer.js");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _ChannelContainer__WEBPACK_IMPORTED_MODULE_0__["default"]; });\n\n\n\n//# sourceURL=webpack:///./client/containers/ChannelContainer/index.js?'
         )
 
         /***/
@@ -321,7 +377,7 @@
       /***/ function(module, __webpack_exports__, __webpack_require__) {
         'use strict'
         eval(
-          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");\n/* harmony import */ var _containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/containers/NavbarContainer */ "./client/containers/NavbarContainer/index.js");\n/* harmony import */ var _hoc_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/hoc/auth */ "./client/hoc/auth.js");\n/* harmony import */ var _containers_LoginContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/containers/LoginContainer */ "./client/containers/LoginContainer/index.js");\n/* harmony import */ var _containers_RegisterContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/containers/RegisterContainer */ "./client/containers/RegisterContainer/index.js");\n\n // components\n\n // hoc\n\n // containers\n\n\n\n\nvar Router = function Router() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_auth__WEBPACK_IMPORTED_MODULE_3__["PublicRoute"], {\n    path: \'/auth/login\',\n    component: _containers_LoginContainer__WEBPACK_IMPORTED_MODULE_4__["default"]\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_auth__WEBPACK_IMPORTED_MODULE_3__["PublicRoute"], {\n    path: \'/auth/register\',\n    component: _containers_RegisterContainer__WEBPACK_IMPORTED_MODULE_5__["default"]\n  })));\n};\n\n/* harmony default export */ __webpack_exports__["default"] = (Router);\n\n//# sourceURL=webpack:///./client/routes/index.js?'
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");\n/* harmony import */ var _hoc_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/hoc/auth */ "./client/hoc/auth.js");\n/* harmony import */ var _containers_LoginContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/containers/LoginContainer */ "./client/containers/LoginContainer/index.js");\n/* harmony import */ var _containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/containers/NavbarContainer */ "./client/containers/NavbarContainer/index.js");\n/* harmony import */ var _containers_ChannelContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/containers/ChannelContainer */ "./client/containers/ChannelContainer/index.js");\n/* harmony import */ var _containers_RegisterContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/containers/RegisterContainer */ "./client/containers/RegisterContainer/index.js");\n\n // components\n// hoc\n\n // containers\n\n\n\n\n\n\nvar Router = function Router() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_containers_NavbarContainer__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_auth__WEBPACK_IMPORTED_MODULE_2__["AuthRoute"], {\n    path: \'/channel\',\n    component: _containers_ChannelContainer__WEBPACK_IMPORTED_MODULE_5__["default"]\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_auth__WEBPACK_IMPORTED_MODULE_2__["PublicRoute"], {\n    path: \'/auth/login\',\n    component: _containers_LoginContainer__WEBPACK_IMPORTED_MODULE_3__["default"]\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hoc_auth__WEBPACK_IMPORTED_MODULE_2__["PublicRoute"], {\n    path: \'/auth/register\',\n    component: _containers_RegisterContainer__WEBPACK_IMPORTED_MODULE_6__["default"]\n  })));\n};\n\n/* harmony default export */ __webpack_exports__["default"] = (Router);\n\n//# sourceURL=webpack:///./client/routes/index.js?'
         )
 
         /***/
@@ -331,11 +387,11 @@
       /*!***************************************!*\
   !*** ./client/store/actions/index.js ***!
   \***************************************/
-      /*! exports provided: postRegister, postLogin, setAuth */
+      /*! exports provided: postRegister, postLogin, setAuth, getChannel */
       /***/ function(module, __webpack_exports__, __webpack_require__) {
         'use strict'
         eval(
-          "__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"postRegister\", function() { return postRegister; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"postLogin\", function() { return postLogin; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"setAuth\", function() { return setAuth; });\n/**\n * Make post request to server to register a user\n *\n * @param {Object} data the user registration data from form\n * @return {Object} redux action\n */\nvar postRegister = function postRegister(data) {\n  return {\n    type: 'POST_REGISTER',\n    payload: {\n      request: {\n        method: 'POST',\n        url: 'register',\n        data: data\n      }\n    }\n  };\n};\n/**\n * Create action to login a user\n *\n * @param {Object} data login credentials\n * @return {Object} Redux action\n */\n\nvar postLogin = function postLogin(data) {\n  return {\n    type: 'POST_LOGIN',\n    payload: {\n      request: {\n        method: 'POST',\n        url: 'login',\n        data: data\n      }\n    }\n  };\n};\n/**\n * Set the auth data for a user\n *\n * @param {Object} data the user data from server\n * @return {Object} action sent to redux store\n */\n\nvar setAuth = function setAuth(data) {\n  return {\n    type: 'SET_AUTH',\n    payload: data\n  };\n};\n\n//# sourceURL=webpack:///./client/store/actions/index.js?"
+          "__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"postRegister\", function() { return postRegister; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"postLogin\", function() { return postLogin; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"setAuth\", function() { return setAuth; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getChannel\", function() { return getChannel; });\n/**\n * Make post request to server to register a user\n *\n * @param {Object} data the user registration data from form\n * @return {Object} redux action\n */\nvar postRegister = function postRegister(data) {\n  return {\n    type: 'POST_REGISTER',\n    payload: {\n      request: {\n        method: 'POST',\n        url: 'register',\n        data: data\n      }\n    }\n  };\n};\n/**\n * Create action to login a user\n *\n * @param {Object} data login credentials\n * @return {Object} Redux action\n */\n\nvar postLogin = function postLogin(data) {\n  return {\n    type: 'POST_LOGIN',\n    payload: {\n      request: {\n        method: 'POST',\n        url: 'login',\n        data: data\n      }\n    }\n  };\n};\n/**\n * Set the auth data for a user\n *\n * @param {Object} data the user data from server\n * @return {Object} action sent to redux store\n */\n\nvar setAuth = function setAuth(data) {\n  return {\n    type: 'SET_AUTH',\n    payload: data\n  };\n};\nvar getChannel = function getChannel() {\n  return {\n    type: 'GET_CHANNEL',\n    payload: {\n      request: {\n        method: 'GET',\n        url: 'channel'\n      }\n    }\n  };\n};\n\n//# sourceURL=webpack:///./client/store/actions/index.js?"
         )
 
         /***/
@@ -349,7 +405,7 @@
       /***/ function(module, __webpack_exports__, __webpack_require__) {
         'use strict'
         eval(
-          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");\n/* harmony import */ var redux_axios_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-axios-middleware */ "./node_modules/redux-axios-middleware/dist/bundle.js");\n/* harmony import */ var redux_axios_middleware__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_axios_middleware__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-devtools-extension */ "./node_modules/redux-devtools-extension/index.js");\n/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reducers */ "./client/store/reducers/index.js");\n\n\n\n\n\nvar instance = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({\n  baseURL: \'/api/\'\n});\n/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_1__["createStore"])(_reducers__WEBPACK_IMPORTED_MODULE_4__["default"], Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_3__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_1__["applyMiddleware"])(redux_axios_middleware__WEBPACK_IMPORTED_MODULE_2___default()(instance, {\n  returnRejectedPromiseOnError: true\n})))));\n\n//# sourceURL=webpack:///./client/store/index.js?'
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");\n/* harmony import */ var redux_axios_middleware__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-axios-middleware */ "./node_modules/redux-axios-middleware/dist/bundle.js");\n/* harmony import */ var redux_axios_middleware__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_axios_middleware__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-devtools-extension */ "./node_modules/redux-devtools-extension/index.js");\n/* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reducers */ "./client/store/reducers/index.js");\n\n\n\n\n\nvar instance = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({\n  baseURL: \'/api/\'\n});\n/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_1__["createStore"])(_reducers__WEBPACK_IMPORTED_MODULE_4__["default"], Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_3__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_1__["applyMiddleware"])(redux_axios_middleware__WEBPACK_IMPORTED_MODULE_2___default()(instance, {\n  returnRejectedPromiseOnError: true,\n  interceptors: {\n    request: [{\n      success: function success(_ref, axiosConfig) {\n        var getState = _ref.getState;\n        var token = getState().auth.token;\n\n        if (token) {\n          axiosConfig.headers = {\n            Authorization: "Bearer ".concat(token.token)\n          };\n        }\n\n        return axiosConfig;\n      }\n    }]\n  }\n})))));\n\n//# sourceURL=webpack:///./client/store/index.js?'
         )
 
         /***/
@@ -369,6 +425,20 @@
         /***/
       },
 
+    /***/ './client/store/reducers/channel.js':
+      /*!******************************************!*\
+  !*** ./client/store/reducers/channel.js ***!
+  \******************************************/
+      /*! exports provided: default */
+      /***/ function(module, __webpack_exports__, __webpack_require__) {
+        'use strict'
+        eval(
+          '__webpack_require__.r(__webpack_exports__);\nvar initialState = {\n  isFetching: false\n};\n/* harmony default export */ __webpack_exports__["default"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n  return state;\n});\n\n//# sourceURL=webpack:///./client/store/reducers/channel.js?'
+        )
+
+        /***/
+      },
+
     /***/ './client/store/reducers/index.js':
       /*!****************************************!*\
   !*** ./client/store/reducers/index.js ***!
@@ -377,7 +447,7 @@
       /***/ function(module, __webpack_exports__, __webpack_require__) {
         'use strict'
         eval(
-          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./auth */ "./client/store/reducers/auth.js");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");\n\n\nvar rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_1__["combineReducers"])({\n  auth: _auth__WEBPACK_IMPORTED_MODULE_0__["default"]\n});\n/* harmony default export */ __webpack_exports__["default"] = (rootReducer);\n\n//# sourceURL=webpack:///./client/store/reducers/index.js?'
+          '__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./auth */ "./client/store/reducers/auth.js");\n/* harmony import */ var _channel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./channel */ "./client/store/reducers/channel.js");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");\n\n\n\nvar rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_2__["combineReducers"])({\n  auth: _auth__WEBPACK_IMPORTED_MODULE_0__["default"],\n  channel: _channel__WEBPACK_IMPORTED_MODULE_1__["default"]\n});\n/* harmony default export */ __webpack_exports__["default"] = (rootReducer);\n\n//# sourceURL=webpack:///./client/store/reducers/index.js?'
         )
 
         /***/

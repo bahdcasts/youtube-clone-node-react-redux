@@ -14,7 +14,24 @@ export default createStore(
   composeWithDevTools(
     applyMiddleware(
       axiosMiddleware(instance, {
-        returnRejectedPromiseOnError: true
+        returnRejectedPromiseOnError: true,
+        interceptors: {
+          request: [
+            {
+              success: ({ getState }, axiosConfig) => {
+                const { token } = getState().auth
+
+                if (token) {
+                  axiosConfig.headers = {
+                    Authorization: `Bearer ${token.token}`
+                  }
+                }
+
+                return axiosConfig
+              }
+            }
+          ]
+        }
       })
     )
   )
