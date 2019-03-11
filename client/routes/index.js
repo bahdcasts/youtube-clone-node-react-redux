@@ -4,6 +4,9 @@ import { BrowserRouter, Route } from 'react-router-dom'
 // components
 import Navbar from '@/components/Navbar'
 
+// hoc
+import { AuthRoute, PublicRoute } from '@/hoc/auth'
+
 // containers
 import LoginContainer from '@/containers/LoginContainer'
 import RegisterContainer from '@/containers/RegisterContainer'
@@ -12,8 +15,8 @@ const Router = () => (
   <BrowserRouter>
     <>
       <Navbar />
-      <Route path={'/auth/login'} component={LoginContainer} />
-      <Route path={'/auth/register'} component={RegisterContainer} />
+      <PublicRoute path={'/auth/login'} component={LoginContainer} />
+      <AuthRoute path={'/auth/register'} component={RegisterContainer} />
     </>
   </BrowserRouter>
 )

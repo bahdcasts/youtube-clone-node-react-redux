@@ -1,6 +1,14 @@
-const initialState = {
-  user: null,
-  token: null
+let initialState = null
+
+try {
+  initialState = JSON.parse(localStorage.getItem('auth'))
+} catch (e) {}
+
+if (!initialState) {
+  initialState = {
+    user: null,
+    token: null
+  }
 }
 
 export default (state = initialState, action) => {
