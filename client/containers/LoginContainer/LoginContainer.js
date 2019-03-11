@@ -28,7 +28,10 @@ class LoginContainer extends React.Component {
    * @var {Object}
    */
   static propTypes = {
-    dispatch: PropTypes.func.isRequired
+    dispatch: PropTypes.func.isRequired,
+    history: PropTypes.shape({
+      push: PropTypes.func.isRequired
+    }).isRequired
   }
 
   /**
@@ -49,13 +52,15 @@ class LoginContainer extends React.Component {
    * @return {null}
    */
   onSubmit = (values, { setErrors }) => {
-    const { dispatch } = this.props
+    const { history, dispatch } = this.props
 
     dispatch(postLogin(values))
       .then(response => {
         localStorage.setItem('auth', JSON.stringify(response.payload.data))
 
         dispatch(setAuth(response.payload.data))
+
+        history.push('/')
       })
       .catch(errors => {
         setErrors(errors.error.response.data)

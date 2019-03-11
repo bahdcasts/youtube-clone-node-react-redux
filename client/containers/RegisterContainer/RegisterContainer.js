@@ -29,7 +29,10 @@ class RegisterContainer extends React.Component {
    * @var {Object}
    */
   static propTypes = {
-    dispatch: PropTypes.func.isRequired
+    dispatch: PropTypes.func.isRequired,
+    history: PropTypes.shape({
+      push: PropTypes.func.isRequired
+    }).isRequired
   }
 
   /**
@@ -56,12 +59,14 @@ class RegisterContainer extends React.Component {
    * @return null
    */
   onSubmit = (values, { setErrors }) => {
-    const { dispatch } = this.props
+    const { history, dispatch } = this.props
     dispatch(postRegister(values))
       .then(response => {
         localStorage.setItem('auth', JSON.stringify(response.payload.data))
 
         dispatch(setAuth(response.payload.data))
+
+        history.push('/')
       })
       .catch(error => {
         setErrors(error.error.response.data)
