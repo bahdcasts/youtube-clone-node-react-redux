@@ -1,6 +1,7 @@
 'use strict'
 
 const User = use('App/Models/User')
+const Channel = use('App/Models/Channel')
 
 class RegisterController {
   /**
@@ -12,6 +13,11 @@ class RegisterController {
    */
   async register({ auth, request, response }) {
     const user = await User.create(request.only(['name', 'email', 'password']))
+
+    await Channel.create({
+      name: user.name,
+      user_id: user.id
+    })
 
     const token = await auth.generate(user)
 
