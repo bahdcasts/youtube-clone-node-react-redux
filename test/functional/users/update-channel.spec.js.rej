@@ -1,0 +1,14 @@
+diff a/test/functional/users/update-channel.spec.js b/test/functional/users/update-channel.spec.js	(rejected hunks)
+@@ -12,4 +15,8 @@ test('authenticated user can update their channel details', async ({ assert, cli
+-  const response = await client.put('api/channel').send({
+-    name: 'Updated channel name',
+-    description: 'Updated Channel description'
+-  }).loginVia(user, 'jwt').end()
++  const response = await client
++    .put('api/channel')
++    .send({
++      name: 'Updated channel name',
++      description: 'Updated Channel description'
++    })
++    .loginVia(user, 'jwt')
++    .end()

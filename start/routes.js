@@ -21,6 +21,9 @@ Route.post('api/register', 'Users/RegisterController.register').validator(
 )
 
 Route.get('api/channel', 'Users/GetChannelController.index').middleware('auth')
+Route.put('api/channel', 'Users/UpdateChannelController.update')
+  .middleware('auth')
+  .validator('UpdateChannel')
 
 Route.post('api/login', 'Users/LoginController.login')
 
