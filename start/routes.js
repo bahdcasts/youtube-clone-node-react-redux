@@ -20,6 +20,8 @@ Route.post('api/register', 'Users/RegisterController.register').validator(
   'RegisterUser'
 )
 
+Route.get('api/channel', 'Users/GetChannelController.index').middleware('auth')
+
 Route.post('api/login', 'Users/LoginController.login')
 
 Route.on('*').render('app')
