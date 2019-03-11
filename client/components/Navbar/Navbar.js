@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 const Navbar = ({ isAuthenticated }) => (
-  <nav className="navbar navbar-expand-lg bg-white">
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container">
       <div className="navbar-translate">
         <a className="navbar-brand" href="/">
@@ -55,5 +56,9 @@ const Navbar = ({ isAuthenticated }) => (
     </div>
   </nav>
 )
+
+Navbar.propTypes = {
+  isAuthenticated: PropTypes.bool.isRequired
+}
 
 export default Navbar

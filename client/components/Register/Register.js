@@ -27,12 +27,7 @@ const Register = ({ onSubmit, initialValues, RegisterSchema }) => (
                 handleSubmit
               }) => (
                 <form onSubmit={handleSubmit}>
-                  <div
-                    className={classnames('form-group', {
-                      'has-danger': errors.name && touched.name,
-                      'has-success': !errors.name && touched.name
-                    })}
-                  >
+                  <div className="form-group">
                     <input
                       type="text"
                       name="name"
@@ -41,8 +36,8 @@ const Register = ({ onSubmit, initialValues, RegisterSchema }) => (
                       onChange={handleChange}
                       placeholder="Your name"
                       className={classnames('form-control', {
-                        'form-control-danger': errors.name && touched.name,
-                        'form-control-success': !errors.name && touched.name
+                        'is-invalid': errors.name && touched.name,
+                        'is-valid': !errors.name && touched.name
                       })}
                     />
                     {errors.name && touched.name && (
@@ -51,12 +46,7 @@ const Register = ({ onSubmit, initialValues, RegisterSchema }) => (
                       </div>
                     )}
                   </div>
-                  <div
-                    className={classnames('form-group', {
-                      'has-danger': errors.email && touched.email,
-                      'has-success': !errors.email && touched.email
-                    })}
-                  >
+                  <div className="form-group">
                     <input
                       type="email"
                       name="email"
@@ -65,8 +55,8 @@ const Register = ({ onSubmit, initialValues, RegisterSchema }) => (
                       onChange={handleChange}
                       placeholder="Your email"
                       className={classnames('form-control', {
-                        'form-control-danger': errors.email && touched.email,
-                        'form-control-success': !errors.email && touched.email
+                        'is-invalid': errors.email && touched.email,
+                        'is-valid': !errors.email && touched.email
                       })}
                     />
                     {errors.email && touched.email && (
@@ -75,12 +65,7 @@ const Register = ({ onSubmit, initialValues, RegisterSchema }) => (
                       </div>
                     )}
                   </div>
-                  <div
-                    className={classnames('form-group', {
-                      'has-danger': errors.password && touched.password,
-                      'has-success': !errors.password && touched.password
-                    })}
-                  >
+                  <div className="form-group">
                     <input
                       type="password"
                       name="password"
@@ -89,10 +74,8 @@ const Register = ({ onSubmit, initialValues, RegisterSchema }) => (
                       onChange={handleChange}
                       placeholder="Your password"
                       className={classnames('form-control', {
-                        'form-control-danger':
-                          errors.password && touched.password,
-                        'form-control-success':
-                          !errors.password && touched.password
+                        'is-invalid': errors.password && touched.password,
+                        'is-valid': !errors.password && touched.password
                       })}
                     />
                     {errors.password && touched.password && (

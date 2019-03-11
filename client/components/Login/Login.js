@@ -26,12 +26,7 @@ const Login = ({ onSubmit, LoginSchema, initialValues }) => (
                 handleSubmit
               }) => (
                 <form onSubmit={handleSubmit}>
-                  <div
-                    className={classnames('form-group', {
-                      'has-danger': errors.email && touched.email,
-                      'has-success': !errors.email && touched.email
-                    })}
-                  >
+                  <div className="form-group">
                     <input
                       id="email"
                       type="email"
@@ -41,8 +36,8 @@ const Login = ({ onSubmit, LoginSchema, initialValues }) => (
                       value={values.email}
                       onChange={handleChange}
                       className={classnames('form-control', {
-                        'form-control-danger': errors.email && touched.email,
-                        'form-control-success': !errors.email && touched.email
+                        'is-invalid': errors.email && touched.email,
+                        'is-valid': !errors.email && touched.email
                       })}
                     />
                     {errors.email && touched.email && (
@@ -51,12 +46,7 @@ const Login = ({ onSubmit, LoginSchema, initialValues }) => (
                       </div>
                     )}
                   </div>
-                  <div
-                    className={classnames('form-group', {
-                      'has-danger': errors.password && touched.password,
-                      'has-success': !errors.password && touched.password
-                    })}
-                  >
+                  <div className="form-group">
                     <input
                       id="password"
                       type="password"
@@ -66,10 +56,8 @@ const Login = ({ onSubmit, LoginSchema, initialValues }) => (
                       onChange={handleChange}
                       value={values.password}
                       className={classnames('form-control', {
-                        'form-control-danger':
-                          errors.password && touched.password,
-                        'form-control-success':
-                          !errors.password && touched.password
+                        'is-invalid': errors.password && touched.password,
+                        'is-valid': !errors.password && touched.password
                       })}
                     />
                     {errors.password && touched.password && (
